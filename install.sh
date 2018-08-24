@@ -1,8 +1,14 @@
 #!/bin/bash
-cd ./networks/correlation_package
-python setup.py install
-cd ../resample2d_package 
-python setup.py install
-cd ../channelnorm_package 
-python setup.py install
+# cd ./networks/correlation_package
+# ./make.sh
+# cd ../resample2d_package
+# ./make.sh
+# cd ../channelnorm_package
+# ./make.sh
+# cd ../correlation1d_package
+# ./make.sh
+# cd ..
+
+cd ./networks/correlation1d_package
+./make.sh
 cd ..

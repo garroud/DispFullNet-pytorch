@@ -1,8 +1,8 @@
-# freda (todo) : 
+# freda (todo) :
 
 import torch.nn as nn
 import torch
-import numpy as np 
+import numpy as np
 
 def conv(batchNorm, in_planes, out_planes, kernel_size=3, stride=1):
     if batchNorm:
@@ -29,7 +29,7 @@ def i_conv(batchNorm, in_planes, out_planes, kernel_size=3, stride=1, bias = Tru
         )
 
 def predict_flow(in_planes):
-    return nn.Conv2d(in_planes,2,kernel_size=3,stride=1,padding=1,bias=True)
+    return nn.Conv2d(in_planes,1,kernel_size=3,stride=1,padding=1,bias=True)
 
 def deconv(in_planes, out_planes):
     return nn.Sequential(
@@ -80,7 +80,7 @@ def save_grad(grads, name):
         grads[name] = grad
     return hook
 import torch
-from channelnorm_package.modules.channelnorm import ChannelNorm 
+from channelnorm_package.modules.channelnorm import ChannelNorm
 model = ChannelNorm().cuda()
 grads = {}
 a = 100*torch.autograd.Variable(torch.randn((1,3,5,5)).cuda(), requires_grad=True)

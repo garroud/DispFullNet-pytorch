@@ -43,15 +43,14 @@ L1 and L2 losses with multi-scale support are available in [losses.py](./losses.
 
     # install custom layers
     bash install.sh
+
+## Docker image
+Libraries and other dependencies for this project include: Ubuntu 16.04, Python 2.7, Pytorch 0.2, CUDNN 6.0, CUDA 8.0
+
+A Dockerfile with the above dependencies is available 
     
-### Python requirements 
-Currently, the code supports python 3
-* numpy 
-* PyTorch ( == 0.4.1, for <= 0.4.0 see branch [python36-PyTorch0.4](https://github.com/NVIDIA/flownet2-pytorch/tree/python36-PyTorch0.4))
-* scipy 
-* scikit-image
-* tensorboardX
-* colorama, tqdm, setproctitle 
+    # Build and launch docker image
+    bash launch_docker.sh
 
 ## Converted Caffe Pre-trained Models
 We've included caffe pre-trained models. Should you use these pre-trained weights, please adhere to the [license agreements](https://drive.google.com/file/d/1TVv0BnNFh3rpHZvD-easMb9jYrPE2Eqd/view?usp=sharing). 
